@@ -57,6 +57,11 @@ namespace Azure.Communication.CallAutomation
                 }
                 writer.WriteEndArray();
             }
+            if (Optional.IsDefined(PauseOnStart))
+            {
+                writer.WritePropertyName("pauseOnStart"u8);
+                writer.WriteBooleanValue(PauseOnStart.Value);
+            }
             writer.WriteEndObject();
         }
     }

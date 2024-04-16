@@ -61,5 +61,8 @@ namespace Azure.Communication.CallAutomation
         /// ///
         /// </summary>
         public IList<ChannelAffinity> ChannelAffinity { get; set; }
+
+        /// <summary> When set to true will start recording in Pause mode, which could be resumed. </summary>
+        public bool PauseOnStart { get; set; }
     }
 }
