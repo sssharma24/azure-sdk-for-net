@@ -189,7 +189,7 @@ namespace Azure.Communication.CallAutomation
                 sequenceNumber,
                 participants == null
                     ? new List<CallParticipantInternal>()
-                    : participants.Select(p => new CallParticipantInternal(CommunicationIdentifierSerializer.Serialize(p.Identifier), p.IsMuted)).ToList()
+                    : participants.Select(p => new CallParticipantInternal(CommunicationIdentifierSerializer.Serialize(p.Identifier), p.IsMuted, null)).ToList()
                 );
 
             return new ParticipantsUpdated(internalObject);
